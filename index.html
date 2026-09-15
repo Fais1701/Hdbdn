@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8dce7">
+<title>For Ritumonnnn ♡</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    margin:0;
+}
+
+body{
+    overflow:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#572d3e;
+    background:#f8dce7;
+}
+
+.screen{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100vh;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 10% 5%,#fff 0%,transparent 28%),
+        radial-gradient(circle at 90% 90%,rgba(220,190,255,.3),transparent 30%),
+        linear-gradient(145deg,#fff8fb,#f6d6e3);
+}
+
+.screen.active{
+    display:flex;
+    animation:screenIn .55s ease;
+}
+
+@keyframes screenIn{
+    from{
+        opacity:0;
+        transform:scale(.98);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.content{
+    width:min(94%,560px);
+    position:relative;
+    z-index:10;
+}
+
+.eyebrow{
+    margin-bottom:12px;
+    font-size:10px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#97727f;
+}
+
+h1{
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    color:#b52f62;
+}
+
+p{
+    line-height:1.7;
+}
+
+.sub{
+    color:#765765;
+    font-size:14px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 27px;
+    border-radius:50px;
+
+    color:white;
+    background:linear-gradient(135deg,#c9366d,#a92057);
+
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+
+    box-shadow:0 12px 28px rgba(165,40,91,.25);
+}
+
+.button:active{
+    transform:scale(.94);
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    color:rgba(190,52,105,.2);
+    animation:floatHeart linear infinite;
+}
+
+.heart:nth-child(1){left:5%;animation-duration:12s}
+.heart:nth-child(2){left:17%;animation-duration:16s;animation-delay:3s}
+.heart:nth-child(3){left:29%;animation-duration:11s;animation-delay:5s}
+.heart:nth-child(4){left:42%;animation-duration:15s;animation-delay:1s}
+.heart:nth-child(5){left:55%;animation-duration:13s;animation-delay:6s}
+.heart:nth-child(6){left:68%;animation-duration:17s;animation-delay:2s}
+.heart:nth-child(7){left:81%;animation-duration:12s;animation-delay:7s}
+.heart:nth-child(8){left:92%;animation-duration:15s;animation-delay:4s}
+
+@keyframes floatHeart{
+    0%{
+        opacity:0;
+        transform:translateY(0) translateX(0) rotate(0);
+    }
+    15%{opacity:.55}
+    50%{
+        transform:translateY(-55vh) translateX(18px) rotate(12deg);
+    }
+    100%{
+        opacity:0;
+        transform:translateY(-115vh) translateX(-12px) rotate(-15deg);
+    }
+}
+
+/* =========================
+   TEDDY
+========================= */
+
+.teddy{
+    position:fixed;
+    width:100px;
+    height:135px;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%) scale(.68);
+    z-index:15;
+    pointer-events:none;
+    animation:teddyFloat 3s ease-in-out infinite;
+}
+
+@keyframes teddyFloat{
+    0%,100%{
+        transform:translateX(-50%) scale(.68) translateY(0);
+    }
+    50%{
+        transform:translateX(-50%) scale(.68) translateY(-6px);
+    }
+}
+
+.ear{
+    position:absolute;
+    width:36px;
+    height:36px;
+    top:3px;
+    background:#b97958;
+    border-radius:50%;
+}
+
+.ear.left{left:5px}
+.ear.right{right:5px}
+
+.ear:after{
+    content:"";
+    position:absolute;
+    inset:8px;
+    background:#e8ae98;
+    border-radius:50%;
+}
+
+.teddy-head{
+    position:absolute;
+    width:82px;
+    height:76px;
+    left:9px;
+    top:15px;
+    background:#c48866;
+    border-radius:48%;
+}
+
+.eye{
+    position:absolute;
+    width:7px;
+    height:9px;
+    top:28px;
+    background:#3b2420;
+    border-radius:50%;
+    animation:blink 4.5s infinite;
+}
+
+.eye.left{left:24px}
+.eye.right{right:24px}
+
+@keyframes blink{
+    0%,45%,48%,100%{transform:scaleY(1)}
+    46%,47%{transform:scaleY(.1)}
+}
+
+.muzzle{
+    position:absolute;
+    width:37px;
+    height:28px;
+    left:22px;
+    top:41px;
+    background:#e8ae98;
+    border-radius:50%;
+}
+
+.nose{
+    position:absolute;
+    width:11px;
+    height:8px;
+    left:13px;
+    top:7px;
+    background:#40251f;
+    border-radius:50%;
+}
+
+.mouth{
+    position:absolute;
+    width:13px;
+    height:6px;
+    left:12px;
+    top:14px;
+    border-bottom:2px solid #40251f;
+    border-radius:50%;
+}
+
+.teddy-body{
+    position:absolute;
+    width:70px;
+    height:62px;
+    left:15px;
+    top:77px;
+    background:#b97958;
+    border-radius:45%;
+}
+
+.belly{
+    position:absolute;
+    width:43px;
+    height:38px;
+    left:13px;
+    top:10px;
+    background:#e8ae98;
+    border-radius:50%;
+}
+
+.teddy-heart{
+    position:absolute;
+    left:12px;
+    top:7px;
+    color:#d83d71;
+    font-size:20px;
+}
+
+.arm{
+    position:absolute;
+    width:23px;
+    height:42px;
+    top:82px;
+    background:#b97958;
+    border-radius:50%;
+}
+
+.arm.left{
+    left:-2px;
+    transform:rotate(28deg);
+}
+
+.arm.right{
+    right:-2px;
+    transform:rotate(-28deg);
+}
+
+.foot{
+    position:absolute;
+    width:29px;
+    height:19px;
+    top:124px;
+    background:#a96b50;
+    border-radius:50%;
+}
+
+.foot.left{left:10px}
+.foot.right{right:10px}
+
+/* =========================
+   HOME
+========================= */
+
+.name{
+    margin:18px 0 8px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(65px,20vw,108px);
+    line-height:.9;
+    letter-spacing:-4px;
+    color:#bd3167;
+}
+
+.age{
+    margin-top:14px;
+    font-size:20px;
+}
+
+/* =========================
+   BALLOONS
+========================= */
+
+.balloon-title{
+    font-size:clamp(42px,12vw,62px);
+    line-height:.95;
+}
+
+.balloon-stage{
+    position:relative;
+    width:100%;
+    max-width:470px;
+    height:390px;
+    margin:0 auto;
+}
+
+.balloon{
+    position:absolute;
+    width:68px;
+    height:88px;
+    border-radius:50%;
+    cursor:pointer;
+
+    box-shadow:
+        inset -10px -12px 18px rgba(0,0,0,.08),
+        inset 9px 7px 14px rgba(255,255,255,.3),
+        0 12px 25px rgba(80,30,50,.13);
+
+    animation:balloonFloat var(--speed) ease-in-out infinite;
+}
+
+.balloon:before{
+    content:"";
+    position:absolute;
+    width:14px;
+    height:28px;
+    left:11px;
+    top:11px;
+    background:rgba(255,255,255,.5);
+    border-radius:50%;
+    transform:rotate(24deg);
+}
+
+.balloon:after{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:10px;
+    left:50%;
+    bottom:-5px;
+    transform:translateX(-50%) rotate(45deg);
+    background:inherit;
+}
+
+.string{
+    position:absolute;
+    left:50%;
+    top:87px;
+    width:1px;
+    height:88px;
+    background:rgba(80,60,70,.4);
+}
+
+.b1{
+    left:6%;
+    top:60px;
+    background:#f47fa5;
+    --speed:3.4s;
+}
+
+.b2{
+    left:40%;
+    top:8px;
+    background:#a79cf4;
+    --speed:4.1s;
+}
+
+.b3{
+    right:6%;
+    top:62px;
+    background:#ffd05b;
+    --speed:3.7s;
+}
+
+.b4{
+    left:20%;
+    top:220px;
+    background:#69cbbb;
+    --speed:4.5s;
+}
+
+.b5{
+    right:20%;
+    top:225px;
+    background:#ff9877;
+    --speed:3.9s;
+}
+
+@keyframes balloonFloat{
+    0%,100%{
+        transform:translate(0,0) rotate(-2deg);
+    }
+    25%{
+        transform:translate(7px,-13px) rotate(3deg);
+    }
+    50%{
+        transform:translate(-5px,-20px) rotate(-2deg);
+    }
+    75%{
+        transform:translate(-9px,-9px) rotate(4deg);
+    }
+}
+
+.balloon.pop{
+    animation:none;
+    transform:scale(1.2);
+}
+
+.balloon.removed{
+    opacity:0;
+    transform:scale(.05);
+    pointer-events:none;
+    transition:.3s;
+}
+
+.counter{
+    display:inline-block;
+    padding:7px 17px;
+    border-radius:30px;
+    background:rgba(255,255,255,.75);
+    color:#87616f;
+    font-size:11px;
+}
+
+/* Balloon message */
+.message{
+    position:fixed;
+    z-index:999;
+    width:205px;
+    padding:14px 16px;
+
+    background:white;
+    border-radius:18px;
+
+    color:#b72e63;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:14px;
+    line-height:1.45;
+
+    box-shadow:0 18px 45px rgba(85,30,55,.18);
+
+    opacity:0;
+    transform:translate(-50%,10px) scale(.3);
+    transition:.55s cubic-bezier(.16,1,.3,1);
+
+    pointer-events:none;
+}
+
+.message.show{
+    opacity:1;
+    transform:translate(-50%,-105px) scale(1);
+}
+
+.message:after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-9px;
+    transform:translateX(-50%);
+    border-left:9px solid transparent;
+    border-right:9px solid transparent;
+    border-top:10px solid white;
+}
+
+.burst{
+    position:fixed;
+    z-index:1000;
+    pointer-events:none;
+    font-size:16px;
+    animation:burst .75s ease-out forwards;
+}
+
+@keyframes burst{
+    from{
+        opacity:1;
+        transform:translate(0,0) rotate(0) scale(1);
+    }
+    to{
+        opacity:0;
+        transform:
+            translate(var(--x),var(--y))
+            rotate(500deg)
+            scale(.2);
+    }
+}
+
+/* =========================
+   CAKE
+========================= */
+
+.oyee{
+    min-height:82px;
+    font-family:Georgia,"Times New Roman",serif;
+    color:#b52e62;
+}
+
+.oyee span{
+    display:block;
+    opacity:0;
+    transform:translateY(10px);
+    animation:oyee .6s forwards;
+}
+
+.oyee span:nth-child(1){animation-delay:.1s}
+.oyee span:nth-child(2){animation-delay:.6s}
+.oyee span:nth-child(3){
+    animation-delay:1.1s;
+    font-size:20px;
+    font-weight:bold;
+}
+.oyee span:nth-child(4){
+    animation-delay:1.7s;
+    font-size:14px;
+    color:#765967;
+}
+
+@keyframes oyee{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.cake-title{
+    font-size:clamp(40px,11vw,58px);
+}
+
+.cake{
+    position:relative;
+    width:280px;
+    height:230px;
+    margin:-3px auto -4px;
+}
+
+.plate{
+    position:absolute;
+    width:270px;
+    height:24px;
+    left:5px;
+    bottom:22px;
+    background:#dfa4b8;
+    border-radius:50%;
+}
+
+.cake-body{
+    position:absolute;
+    width:215px;
+    height:105px;
+    left:32px;
+    bottom:42px;
+    background:linear-gradient(#f7b4ca,#df7fa5);
+    border-radius:15px 15px 25px 25px;
+}
+
+.frosting{
+    position:absolute;
+    width:215px;
+    height:43px;
+    top:-16px;
+    background:#fffafd;
+    border-radius:50%;
+}
+
+.number{
+    position:absolute;
+    width:100%;
+    top:34px;
+    font-family:Georgia,serif;
+    font-size:37px;
+    font-weight:bold;
+    color:#b42b5d;
+}
+
+.candle{
+    position:absolute;
+    width:16px;
+    height:65px;
+    bottom:143px;
+    border-radius:5px;
+    z-index:4;
+
+    background:repeating-linear-gradient(
+        135deg,
+        white 0 8px,
+        #ef8bab 8px 16px
+    );
+}
+
+.c1{left:88px}
+.c2{left:132px}
+.c3{left:176px}
+
+.flame{
+    position:absolute;
+    width:20px;
+    height:29px;
+    bottom:205px;
+    z-index:7;
+
+    background:linear-gradient(#fff36b,#ff8c20);
+    border-radius:60% 40% 60% 40%;
+
+    filter:drop-shadow(0 0 9px rgba(255,170,40,.85));
+    animation:flicker .55s ease-in-out infinite alternate;
+    transition:opacity .12s,filter .12s;
+}
+
+.f1{left:86px}
+.f2{left:130px}
+.f3{left:174px}
+
+@keyframes flicker{
+    from{transform:rotate(5deg) scale(1)}
+    to{transform:rotate(-6deg) scale(.9)}
+}
+
+.flame.off{
+    opacity:0!important;
+    filter:none!important;
+    animation:none!important;
+}
+
+#wind{
+    width:min(90%,380px);
+    margin-top:7px;
+    accent-color:#c63168;
+}
+
+.wind-label{
+    font-size:13px;
+    font-weight:bold;
+}
+
+.wind-value{
+    margin-top:3px;
+    color:#98727f;
+    font-size:11px;
+}
+
+/* =========================
+   GIFT
+========================= */
+
+.gift-title{
+    font-size:clamp(38px,11vw,58px);
+}
+
+.sunflower{
+    position:relative;
+    width:125px;
+    height:125px;
+    margin:0 auto;
+    animation:flower 3s ease-in-out infinite;
+}
+
+@keyframes flower{
+    50%{
+        transform:translateY(-5px) rotate(2deg);
+    }
+}
+
+.petal{
+    position:absolute;
+    width:40px;
+    height:58px;
+    left:43px;
+    top:20px;
+    background:#ffca2d;
+    border-radius:50%;
+    transform-origin:20px 39px;
+}
+
+.petal:nth-child(1){transform:rotate(0) translateY(-24px)}
+.petal:nth-child(2){transform:rotate(45deg) translateY(-24px)}
+.petal:nth-child(3){transform:rotate(90deg) translateY(-24px)}
+.petal:nth-child(4){transform:rotate(135deg) translateY(-24px)}
+.petal:nth-child(5){transform:rotate(180deg) translateY(-24px)}
+.petal:nth-child(6){transform:rotate(225deg) translateY(-24px)}
+.petal:nth-child(7){transform:rotate(270deg) translateY(-24px)}
+.petal:nth-child(8){transform:rotate(315deg) translateY(-24px)}
+
+.flower-center{
+    position:absolute;
+    width:52px;
+    height:52px;
+    left:37px;
+    top:36px;
+    background:#6d3d20;
+    border-radius:50%;
+    z-index:3;
+}
+
+.stem{
+    position:absolute;
+    width:7px;
+    height:65px;
+    left:62px;
+    top:76px;
+    background:#5b8b4e;
+    border-radius:10px;
+}
+
+.kitkat{
+    position:relative;
+    width:210px;
+    height:70px;
+    margin:-3px auto 5px;
+}
+
+.kitkat-wrap{
+    position:absolute;
+    width:190px;
+    height:68px;
+    left:10px;
+    background:linear-gradient(145deg,#ef333d,#ad0d1c);
+    border-radius:9px;
+    transform:rotate(-3deg);
+    box-shadow:0 12px 24px rgba(80,0,10,.18);
+}
+
+.kitkat-border{
+    position:absolute;
+    inset:5px;
+    border:2px solid white;
+    border-radius:6px;
+}
+
+.kitkat-logo{
+    position:absolute;
+    width:130px;
+    height:31px;
+    left:30px;
+    top:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:white;
+    border-radius:50%;
+
+    color:#c91c29;
+    font-family:Georgia,serif;
+    font-size:19px;
+    font-weight:bold;
+}
+
+.gift-box{
+    padding:12px 16px;
+    background:rgba(255,255,255,.82);
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(70,30,50,.08);
+}
+
+.gift-box p{
+    margin:5px 0;
+    font-size:12px;
+}
+
+.gift-box strong{
+    color:#c33068;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+    width:min(94%,550px);
+    max-height:88vh;
+    overflow-y:auto;
+
+    padding:28px 24px;
+
+    text-align:left;
+
+    background:#fffdf8;
+    border-radius:5px;
+
+    box-shadow:0 25px 65px rgba(70,30,40,.15);
+}
+
+.letter h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.letter p{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:15px;
+    line-height:1.75;
+}
+
+.signature{
+    color:#c33068;
+    font-weight:bold;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-number{
+    font-family:Georgia,serif;
+    font-size:clamp(100px,28vw,145px);
+    line-height:.8;
+    color:#d03a70;
+    text-shadow:8px 8px rgba(255,185,207,.7);
+}
+
+.final h1{
+    margin-top:28px;
+    font-size:clamp(36px,10vw,50px);
+    line-height:1.05;
+}
+
+.highlight{
+    color:#c32e67;
+    font-weight:bold;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    z-index:9999;
+    pointer-events:none;
+    animation:confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall{
+    from{
+        opacity:1;
+        transform:translateY(0) rotate(0);
+    }
+    to{
+        opacity:0;
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:430px){
+
+    .screen{
+        padding:12px;
+    }
+
+    .balloon-stage{
+        height:360px;
+    }
+
+    .balloon{
+        width:60px;
+        height:79px;
+    }
+
+    .b1{
+        left:3%;
+        top:60px;
+    }
+
+    .b2{
+        left:39%;
+        top:10px;
+    }
+
+    .b3{
+        right:3%;
+        top:63px;
+    }
+
+    .b4{
+        left:15%;
+        top:205px;
+    }
+
+    .b5{
+        right:15%;
+        top:210px;
+    }
+
+    .string{
+        top:78px;
+    }
+
+    .message{
+        width:175px;
+        font-size:13px;
+    }
+
+    .message.show{
+        transform:translate(-50%,-98px) scale(1);
+    }
+
+    .cake{
+        transform:scale(.82);
+        margin-top:-8px;
+        margin-bottom:-18px;
+    }
+
+    .letter{
+        padding:25px 19px;
+    }
+
+    .letter h1{
+        font-size:38px;
+    }
+
+    .letter p{
+        font-size:14px;
+    }
+}
+
+@media(max-height:700px){
+
+    .balloon-stage{
+        height:300px;
+    }
+
+    .b1{top:30px}
+    .b2{top:0}
+    .b3{top:35px}
+    .b4{top:155px}
+    .b5{top:160px}
+
+    .cake{
+        transform:scale(.67);
+        margin-top:-27px;
+        margin-bottom:-40px;
+    }
+
+    .sunflower{
+        transform:scale(.72);
+        margin-top:-14px;
+        margin-bottom:-16px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="hearts">
+    <span class="heart">♡</span>
+    <span class="heart">♥</span>
+    <span class="heart">♡</span>
+    <span class="heart">✦</span>
+    <span class="heart">♡</span>
+    <span class="heart">♥</span>
+    <span class="heart">♡</span>
+    <span class="heart">♡</span>
+</div>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section class="screen active" id="home">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            A tiny birthday surprise
+        </div>
+
+        <div class="name">
+            Ritumonnnn
+        </div>
+
+        <div>
+            my bandi, my baccha, my pataka ♡
+        </div>
+
+        <div class="age">
+            Rita Roy is officially 23 today.
+        </div>
+
+        <a href="#balloons" class="button nav">
+            Open your surprise
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BALLOONS
+========================= -->
+
+<section class="screen" id="balloons">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            First mission, meri pataka
+        </div>
+
+        <h1 class="balloon-title">
+            Pop the balloons
+        </h1>
+
+        <p class="sub">
+            Tap them one by one.<br>
+            Each balloon has something for you.
+        </p>
+
+        <div class="balloon-stage">
+
+            <div class="balloon b1" data-message="You deserve all the happiness in the world, meri baccha. ♡">
+                <span class="string"></span>
+            </div>
+
+            <div class="balloon b2" data-message="Rita Roy, please never forget how genuinely special you are.">
+                <span class="string"></span>
+            </div>
+
+            <div class="balloon b3" data-message="I love how much you care. That chalant little heart of yours is one of my favourite things.">
+                <span class="string"></span>
+            </div>
+
+            <div class="balloon b4" data-message="You're cute, chaotic, annoying sometimes... and somehow still my favourite.">
+                <span class="string"></span>
+            </div>
+
+            <div class="balloon b5" data-message="My bandi, my baccha, my biwi, my pataka... happy birthday. ♡">
+                <span class="string"></span>
+            </div>
+
+        </div>
+
+        <div class="counter" id="counter">
+            0 / 5 popped
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CAKE
+========================= -->
+
+<section class="screen" id="cake">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            OIYEE ATTENTION PLEASE
+        </div>
+
+        <div class="oyee">
+
+            <span>OIYEE...</span>
+            <span>OIYEEE...</span>
+            <span>OIYEEEE SUNOO NAAAAA</span>
+            <span>Ritumonnnn, meri baccha...</span>
+
+        </div>
+
+        <h1 class="cake-title">
+            Make a wish ♡
+        </h1>
+
+        <p class="sub">
+            Close your eyes and make your wish.<br>
+            No cheating. Mai drone se dekh rha hu. 👀
+        </p>
+
+        <div class="cake">
+
+            <div class="flame f1"></div>
+            <div class="flame f2"></div>
+            <div class="flame f3"></div>
+
+            <div class="candle c1"></div>
+            <div class="candle c2"></div>
+            <div class="candle c3"></div>
+
+            <div class="cake-body">
+                
